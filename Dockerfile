@@ -12,7 +12,7 @@ FROM golangci/golangci-lint:latest
 COPY --from=base /go/src/candles /go/src/candles
 WORKDIR /go/src/candles
 
-RUN golangci-lint run --timeout 3m0s -v .git commit -m "first commit"
+RUN golangci-lint run --timeout 3m0s -v .
 
 # ---- Dependencies ----
 FROM base AS dependencies
